@@ -1,6 +1,6 @@
 .output-container {
     background-color: gray;
-    height: 90%;
+    height: 100%;
     display: flex;
     justify-content: center;
 
@@ -12,7 +12,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid red;
     width: 100%;
 }
 
@@ -20,12 +19,30 @@
     height: 100%;
     flex: 1;
     background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
+
 
 .resources {
     height: 100%;
     flex: 1;
-
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.materials li, .resources li {
+    list-style: none;
+    
+}
+
+
+@media screen {
+    
 }
 
