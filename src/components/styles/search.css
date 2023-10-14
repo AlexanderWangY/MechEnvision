@@ -1,0 +1,32 @@
+.searchWrapper {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    padding: 7px 13px 7px 13px;
+    width: 50vw;
+    max-width: 700px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.199);
+}
+button {
+    height: 54px;
+    width: 54px;
+    background-color: rgb(0, 134, 134);
+    border: none;
+    font-size: 30px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(144, 235, 235);
+}
