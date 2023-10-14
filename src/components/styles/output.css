@@ -1,0 +1,31 @@
+.output-container {
+    background-color: gray;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.output-container-ui {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid red;
+    width: 100%;
+}
+
+.materials {
+    height: 100%;
+    flex: 1;
+    background-color: red;
+}
+
+.resources {
+    height: 100%;
+    flex: 1;
+
+    background-color: blue;
+}
+
