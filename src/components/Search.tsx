@@ -6,9 +6,9 @@ const Search = () => {
   const [inputtedData, setInputtedData] = useState(false);
   async function postText() {
     const request = {
-      textInput: data,
+      userInput: data,
     };
-    const response = await fetch("http://54.88.194.151:8080/generate/", {
+    const response = await fetch("http://34.201.71.236:8080/generate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

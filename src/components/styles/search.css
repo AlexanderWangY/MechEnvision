@@ -12,7 +12,7 @@
     animation-direction: normal;
     animation-fill-mode: forwards;
 
-    transform: translateY(-250px)
+    transform: translateY(-30px)
 }
 
 input {
@@ -61,10 +61,8 @@ button:hover {
     }
 
     to {
-        transform: translateY(-250px);
+        transform: translateY(-30px);
     }
 }
-
-
 
 

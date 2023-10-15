@@ -2,7 +2,7 @@ import "./styles/output.css";
 const Output = () => {
   const materials = [
     {
-      genName: "Gears",
+      genName: "{Gears}",
       specificName: "1/8 sprong Aluminum Gear",
       url: "amazon.com/gear",
     },
