@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./styles/search.css";
+import TextAnimation from "./TextAnimation";
 
 const Search = () => {
   const [data, setData] = useState("");
@@ -46,60 +47,85 @@ const Search = () => {
     console.log(`hello ${inputtedData}`);
   }
 
+  const containerStyle = {
+    width: "400px", // Set a fixed width for the container
+    textAlign: "center", // Center-align the text inside the container
+    margin: "0 auto", // Center the container horizontally
+  };
+
   return (
     <>
-      <div className={`overwrapper ${inputtedData ? "overextend" : ""}`}>
-        <div className={`searchWrapper ${inputtedData ? "expanded" : ""} `}>
-          <input
-            type="text"
-            id="inputForm"
-            name="myInput"
-            placeholder="Enter..."
-            value={data}
-            onChange={(event) => setData(event.target.value)}
-          />
-          <button
-            type="submit"
-            onClick={() => {
-              handleSubmit();
-              postText();
-            }}
-          >
-            &#8626;
-          </button>
-        </div>
-        {dataReceived && <div className="results">Results</div>}
-
-        {dataReceived && (
-          <div className={`output-container`}>
-            <div className="output-container-ui">
-              <div className="materials">
-                <li className="liTitle">Parts</li>
-                {materials.map((item) => (
-                  <li>
-                    {item.generalName}: {item.specificName} [
-                    <a href={`${item.url}`} target="_blank">
-                      link
-                    </a>
-                    ]
-                  </li>
-                ))}
-              </div>
-              <div className="resources">
-                <li className="liTitle">Resources</li>
-                {resources.map((item) => (
-                  <li>
-                    {item.name} [
-                    <a href={`${item.url}`} target="_blank">
-                      link
-                    </a>
-                    ]
-                  </li>
-                ))}
-              </div>
+      <div className="wrapper">
+        {inputtedData == true ? (
+          ""
+        ) : (
+          <div style={containerStyle} className="ideas">
+            <div style={{ textAlign: "left" }}>
+              <TextAnimation
+                prompts={[
+                  "an autonomous RC car.",
+                  "an auto-aligning solar panel.",
+                  "an automatic door-opener.",
+                ]}
+              />
             </div>
           </div>
         )}
+        <div className={`overwrapper ${inputtedData ? "overextend" : ""}`}>
+          <div className={`searchWrapper ${inputtedData ? "expanded" : ""} `}>
+            <input
+              type="text"
+              autoComplete="off"
+              id="inputForm"
+              name="myInput"
+              placeholder="Enter..."
+              value={data}
+              onChange={(event) => setData(event.target.value)}
+            />
+            <button
+              type="submit"
+              onClick={() => {
+                handleSubmit();
+                postText();
+              }}
+            >
+              {dataReceived ? <div>&#10227;</div> : <div>&#8674;</div>}
+            </button>
+          </div>
+          {dataReceived == false && inputtedData == true ? (
+            <div>Cooking up a project...</div>
+          ) : (
+            ""
+          )}
+          {dataReceived && <div className="results">Results</div>}
+
+          {dataReceived == true &&
+            materials.length > 1 &&
+            resources.length > 1 && (
+              <div className={`output-container`}>
+                <div className="output-container-ui">
+                  <div className="materials">
+                    <li className="liTitle">Parts</li>
+                    {materials.map((item) => (
+                      <a href={`${item.url}`} target="_blank">
+                        <li>
+                          {item.generalName}: {item.specificName}
+                        </li>
+                      </a>
+                    ))}
+                  </div>
+                  <div className="resources">
+                    <li className="liTitle">Resources</li>
+                    {resources.map((item) => (
+                      <a href={`${item.url}`} target="_blank">
+                        <li>{item.name}</li>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+        </div>
       </div>
     </>
   );

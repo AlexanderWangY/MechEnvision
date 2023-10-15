@@ -1,0 +1,13 @@
+.ideas {
+    font-family: Arial, sans-serif;
+    font-size: 60px; 
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-align: left;
+    margin-bottom: 80px;
+    min-width: 800px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+}

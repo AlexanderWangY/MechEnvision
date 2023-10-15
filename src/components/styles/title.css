@@ -1,0 +1,126 @@
+body, h1 {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Create a container for the title page with background image */
+.wavy-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('wave.svg') repeat-x; /* Link to your SVG file */
+}
+.top-bar {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin-right: 0%;
+}
+
+.title-page {
+    background-size: cover; /* Cover the entire page with the image */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    height: 100vh; /* Set the height of the container to the viewport height */
+    text-align: left; /* Align content to the left */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+    padding: 30px; 
+}
+
+/* Style the title text */
+/* .title {
+    font-family: Arial, sans-serif;
+    font-size: 45px; 
+    font-weight: bold;
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-align: left; 
+    padding: 20px;
+    margin-left: -160px;
+    order: 1; 
+} */
+
+.mission-box {
+    padding: 60px; /* Add padding for content within the box */
+    max-width: 800px; /* Set a maximum width for the box */
+    text-align: left; /* Align text to the left */
+}
+
+/* Style the mission statement text */
+.mission-text {
+    font-family: Arial, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.582);
+    max-width: 800px;
+}
+/* Style the subheader */
+.mission-caption{
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.658);
+    max-width: 800px;
+    margin-top: -20px;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #fff;
+        color: #ffcff6;
+    }
+    20% {
+        background-color: #fff;
+        color: #ffcff6;
+    }
+    40% {
+        background-color: #fff;
+        color: #ffcff6;
+    }
+    60% {
+        background-color: transparent;
+        color: white;
+    }
+    80% {
+        background-color: transparent;
+        color: white;
+    }
+    90% {
+        background-color: transparent;
+        color: white;
+    }
+    100% {
+        background-color: #fff;
+        color: #ffcff6;
+    }
+}
+
+.start-button {
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 40px; /* Increase the padding to make the button wider */
+    background-color: #fff; /* White background */
+    color: #ffcff6; /* Transparent text color */
+    text-decoration: none;
+    border: 2px solid #fff; /* White border */
+    border-radius: 15px; /* Rounded corners */
+    font-weight: 700;
+    font-size: 30px;
+    transition: background-color 0.1s, color 0.1s;
+    animation: blink 1.8s infinite; /* Apply the blink animation */
+}
+
+/* Hover effect for the "Start" button */
+.start-button:hover {
+    background-color: transparent; /* Invert colors on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* Button in the top right corner */

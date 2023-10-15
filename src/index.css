@@ -4,6 +4,11 @@ html, body, #root {
     margin: 0;
     height: 100%;
     width: 100%;
-    background-color: #FFCFF6;
+    background: url('./components/styles/wave.svg') repeat-x; /* Link to your SVG file */
     font-family: "Josefin Sans", sans-serif;
+}
+
+#root {
+    overflow-y: scroll;
+    overflow-x: hidden;
 }

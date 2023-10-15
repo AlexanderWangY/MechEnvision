@@ -1,5 +1,14 @@
+.wrapper {
+    margin-top: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
 .overwrapper {
-    margin-top: 40vh;
     width: 60vw;
     display: flex;
     flex-direction: column;
@@ -32,35 +41,47 @@
 
 input {
     height: 40px;
-    border-bottom: 2px solid #4E4187;
     padding: 7px 13px 7px 13px;
     width: 50vw;
     max-width: 700px;
-    background-color: #4E4187;
-    color: #FFCFF6;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-style: none;
     font-size: 20px;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 input:focus {
     outline: none;
+    border-style: solid;
     box-shadow: 0px 0px 5px 5px solid #4E4187;
 }
 button {
-    height: 54px;
-    width: 54px;
-    background-color: rgb(0, 0, 134);
+    height: 58px;
+    width: 58px;
+    background-color: #EF6079FF;
     border: none;
     font-size: 30px;
-    border-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     transition: all 0.1s;
     padding-left: 30px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: white;
     
+}
+
+button div {
+    margin-right: 25px;
+    margin-top: 5px;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: rgb(144, 235, 235);
+    background-color: rgba(239, 96, 120, 0.541);
 }
 
 @keyframes slideInLeft {
@@ -79,7 +100,7 @@ button:hover {
     }
 
     to {
-        transform: translateY(-100px);
+        transform: translateY(-60px);
     }
 }
 
@@ -123,6 +144,7 @@ button:hover {
 .liTitle {
     background-color: black;
     font-size: 35px;
+    width: 99%;
 }
 
 
@@ -139,7 +161,25 @@ li {
     border-radius: 10px;
     font-size: 20px;
     white-space: nowrap;
+    transition: background-color .15s;
     
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: #4d4086;
+}
+
+.liTitle:hover {
+    cursor: default;
+    background-color: black;
+}
+
+.resources a, .materials a {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+
 }
 
 .results {
@@ -148,11 +188,20 @@ li {
 
 @media only screen and (max-width: 910px) {
     .output-container-ui {
-        display: block;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
 
     li {
         width: auto;
         font-size: small;
+    }
+
+    .materials, .resources {
+        justify-content: center;
+        align-items: center;
+        display: flex;
     }
   }
