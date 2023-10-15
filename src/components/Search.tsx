@@ -99,32 +99,30 @@ const Search = () => {
           )}
           {dataReceived && <div className="results">Results</div>}
 
-          {dataReceived == true &&
-            materials.length > 1 &&
-            resources.length > 1 && (
-              <div className={`output-container`}>
-                <div className="output-container-ui">
-                  <div className="materials">
-                    <li className="liTitle">Parts</li>
-                    {materials.map((item) => (
-                      <a href={`${item.url}`} target="_blank">
-                        <li>
-                          {item.generalName}: {item.specificName}
-                        </li>
-                      </a>
-                    ))}
-                  </div>
-                  <div className="resources">
-                    <li className="liTitle">Resources</li>
-                    {resources.map((item) => (
-                      <a href={`${item.url}`} target="_blank">
-                        <li>{item.name}</li>
-                      </a>
-                    ))}
-                  </div>
+          {dataReceived == true && (
+            <div className={`output-container`}>
+              <div className="output-container-ui">
+                <div className="materials">
+                  <li className="liTitle">Parts</li>
+                  {materials.map((item) => (
+                    <a href={`${item.url}`} target="_blank">
+                      <li>
+                        {item.generalName}: {item.specificName}
+                      </li>
+                    </a>
+                  ))}
+                </div>
+                <div className="resources">
+                  <li className="liTitle">Resources</li>
+                  {resources.map((item) => (
+                    <a href={`${item.url}`} target="_blank">
+                      <li>{item.name}</li>
+                    </a>
+                  ))}
                 </div>
               </div>
-            )}
+            </div>
+          )}
         </div>
       </div>
     </>
