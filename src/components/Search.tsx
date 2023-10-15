@@ -40,6 +40,7 @@ const Search = () => {
 
   function handleSubmit() {
     console.log(`You inputted ${data}`);
+
     setData("");
     setInputtedData(true);
     console.log(`hello ${inputtedData}`);
@@ -47,53 +48,57 @@ const Search = () => {
 
   return (
     <>
-      <div className={`searchWrapper ${inputtedData ? "expanded" : ""}`}>
-        <input
-          type="text"
-          id="inputForm"
-          name="myInput"
-          placeholder="Enter..."
-          value={data}
-          onChange={(event) => setData(event.target.value)}
-        />
-        <button
-          type="submit"
-          onClick={() => {
-            handleSubmit();
-            postText();
-          }}
-        >
-          &#8626;
-        </button>
-      </div>
-      {dataReceived && (
-        <div className="output-container">
-          <div className="output-container-ui">
-            <div className="materials">
-              {materials.map((item) => (
-                <li>
-                  {item.generalName}: {item.specificName} [
-                  <a href={`${item.url}`} target="_blank">
-                    link
-                  </a>
-                  ]
-                </li>
-              ))}
-            </div>
-            <div className="resources">
-              {resources.map((item) => (
-                <li>
-                  {item.name} [
-                  <a href={`${item.url}`} target="_blank">
-                    link
-                  </a>
-                  ]
-                </li>
-              ))}
+      <div className={`overwrapper ${inputtedData ? "overextend" : ""}`}>
+        <div className={`searchWrapper ${inputtedData ? "expanded" : ""} `}>
+          <input
+            type="text"
+            id="inputForm"
+            name="myInput"
+            placeholder="Enter..."
+            value={data}
+            onChange={(event) => setData(event.target.value)}
+          />
+          <button
+            type="submit"
+            onClick={() => {
+              handleSubmit();
+              postText();
+            }}
+          >
+            &#8626;
+          </button>
+        </div>
+        {dataReceived && <div className="results">Results</div>}
+
+        {dataReceived && (
+          <div className={`output-container`}>
+            <div className="output-container-ui">
+              <div className="materials">
+                {materials.map((item) => (
+                  <li>
+                    {item.generalName}: {item.specificName} [
+                    <a href={`${item.url}`} target="_blank">
+                      link
+                    </a>
+                    ]
+                  </li>
+                ))}
+              </div>
+              <div className="resources">
+                {resources.map((item) => (
+                  <li>
+                    {item.name} [
+                    <a href={`${item.url}`} target="_blank">
+                      link
+                    </a>
+                    ]
+                  </li>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 };

@@ -4,14 +4,9 @@ import Search from "./components/Search";
 
 const App = () => {
   return (
-    <>
-      <div className="search">
-        <Search />
-      </div>
-      {/* <div className="output">
-        <Output />
-      </div> */}
-    </>
+    <div className="main">
+      <Search />
+    </div>
   );
 };
 
