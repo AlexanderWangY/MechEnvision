@@ -1,6 +1,22 @@
+.overwrapper {
+    border: 1px solid yellow;
+    margin-top: 40vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overextend {
+    animation: slideUp 1s ease-in-out 0s normal forwards;
+}
 .searchWrapper {
     display: flex;
     align-items: center;
+    border: 1px solid red;
+}
+
+.expanded{
     height: 100%;
     
 }
@@ -13,9 +29,12 @@
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: forwards;
-
-    transform: translateY(-250px)
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
 }
+
 
 input {
     height: 40px;
@@ -67,7 +86,7 @@ button:hover {
     }
 
     to {
-        transform: translateY(-250px);
+        transform: translateY(-100px);
     }
 }
 
@@ -75,10 +94,11 @@ button:hover {
 
 
 .output-container {
-    background-color: gray;
-    height: 100%;
+    height: auto;
     display: flex;
-    justify-content: center;
+    border: 1px solid green;
+
+    margin-bottom: 30px;
 
     
 }
@@ -92,12 +112,10 @@ button:hover {
 }
 
 .materials {
-    height: 100%;
     flex: 1;
-    background-color: red;
+    
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     padding: 30px 15px 30px 15px;
     opacity: 0.3;
@@ -106,12 +124,9 @@ button:hover {
 
 
 .resources {
-    height: 100%;
     flex: 1;
-    background-color: blue;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     padding: 30px 15px 30px 15px;
     opacity: 0.3;
