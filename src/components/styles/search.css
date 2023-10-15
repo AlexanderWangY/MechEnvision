@@ -111,10 +111,14 @@ button:hover {
     flex-direction: column;
     align-items: center;
     padding: 30px 15px 30px 15px;
-    opacity: 0.3;
     font-family: 'Bebas Neue', sans-serif;
 }
 
+.tooltip {
+    padding-top: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    transition: ease-in
+}
 
 .resources {
     flex: 1;
@@ -122,7 +126,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     padding: 30px 15px 30px 15px;
-    opacity: 0.3;
     font-family: 'Bebas Neue', sans-serif;
 }
 

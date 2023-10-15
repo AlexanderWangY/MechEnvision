@@ -71,9 +71,14 @@ const Search = () => {
         {dataReceived && <div className="results">Results</div>}
 
         {!dataReceived && inputtedData && (
-          <div className="loading">
-            <div className="spinner"></div>
-          </div>
+          <>
+            <div className="loading">
+              <div className="spinner"></div>
+            </div>
+            <div className="tooltip">
+              Tooltip: Ask for more details for better results!
+            </div>
+          </>
         )}
         {dataReceived && (
           <div className={`output-container`}>
