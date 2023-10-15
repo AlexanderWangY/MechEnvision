@@ -2,7 +2,7 @@ import "./styles/output.css";
 const Output = () => {
   const materials = [
     {
-      genName: "Gears",
+      genName: "{Gears}",
       specificName: "1/8 sprong Aluminum Gear",
       url: "amazon.com/gear",
     },
@@ -35,6 +35,56 @@ const Output = () => {
       genName: "Foam Bricks",
       specificName: "1 square foot foam bricks",
       url: "amazon.com/foambricks",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
     },
     {
       genName: "Propeler",

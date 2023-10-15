@@ -1,14 +1,16 @@
 import "./App.css";
+import "./index.css";
 import Search from "./components/Search";
-import Output from "./components/Output";
 
 const App = () => {
   return (
     <>
-      <div className="main">
+      <div className="search">
         <Search />
       </div>
-      <Output />
+      {/* <div className="output">
+        <Output />
+      </div> */}
     </>
   );
 };
