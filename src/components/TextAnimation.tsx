@@ -1,5 +1,5 @@
 // TextAnimation.tsx
-import React, { Component } from "react";
+import { Component } from "react";
 import "./styles/textanimation.css";
 
 interface TextAnimationProps {
@@ -34,8 +34,7 @@ class TextAnimation extends Component<TextAnimationProps, TextAnimationState> {
   }
 
   type = () => {
-    const { prompts, promptIndex, textIndex, isDeleting, currentText } =
-      this.state;
+    const { prompts, promptIndex, textIndex, isDeleting } = this.state;
     const currentPrompt = prompts[promptIndex];
 
     if (isDeleting) {
