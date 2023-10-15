@@ -156,7 +156,7 @@ li {
     width: 100%;
     padding: 20px 10px 20px 10px;
     margin-bottom: 25px;
-    background-color: #6554af;
+    background-color: #EF6079FF;
     color: white;
     border-radius: 10px;
     font-size: 20px;
@@ -204,4 +204,10 @@ li:hover {
         align-items: center;
         display: flex;
     }
+  }
+
+  .container1 {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
   }

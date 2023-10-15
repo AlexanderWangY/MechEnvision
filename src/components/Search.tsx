@@ -41,17 +41,11 @@ const Search = () => {
 
   function handleSubmit() {
     console.log(`You inputted ${data}`);
-
+    setDataReceived(false);
     setData("");
     setInputtedData(true);
     console.log(`hello ${inputtedData}`);
   }
-
-  const containerStyle = {
-    width: "400px", // Set a fixed width for the container
-    textAlign: "center", // Center-align the text inside the container
-    margin: "0 auto", // Center the container horizontally
-  };
 
   return (
     <>
@@ -59,7 +53,7 @@ const Search = () => {
         {inputtedData == true ? (
           ""
         ) : (
-          <div style={containerStyle} className="ideas">
+          <div className="ideas container1">
             <div style={{ textAlign: "left" }}>
               <TextAnimation
                 prompts={[
@@ -99,7 +93,7 @@ const Search = () => {
           )}
           {dataReceived && <div className="results">Results</div>}
 
-          {dataReceived == true && (
+          {dataReceived && (
             <div className={`output-container`}>
               <div className="output-container-ui">
                 <div className="materials">
