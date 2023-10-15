@@ -5,10 +5,12 @@ import Output from "./components/Output";
 const App = () => {
   return (
     <>
-      <div className="main">
+      <div className="search">
         <Search />
       </div>
-      <Output />
+      <div className="output">
+        <Output />
+      </div>
     </>
   );
 };

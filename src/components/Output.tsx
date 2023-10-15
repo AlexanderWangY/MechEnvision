@@ -41,6 +41,56 @@ const Output = () => {
       specificName: "3-inch plastic propeller",
       url: "amazon.com/propeller",
     },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
+    {
+      genName: "Propeler",
+      specificName: "3-inch plastic propeller",
+      url: "amazon.com/propeller",
+    },
   ];
 
   const resources = [

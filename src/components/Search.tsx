@@ -3,7 +3,7 @@ import "./styles/search.css";
 
 const Search = () => {
   const [data, setData] = useState("");
-
+  const [inputtedData, setInputtedData] = useState(false);
   async function postText() {
     const request = {
       textInput: data,
@@ -24,28 +24,32 @@ const Search = () => {
   function handleSubmit() {
     console.log(`You inputted ${data}`);
     setData("");
+    setInputtedData(true);
+    console.log(`hello ${inputtedData}`);
   }
 
   return (
-    <div className="searchWrapper">
-      <input
-        type="text"
-        id="inputForm"
-        name="myInput"
-        placeholder="Enter..."
-        value={data}
-        onChange={(event) => setData(event.target.value)}
-      />
-      <button
-        type="submit"
-        onClick={() => {
-          handleSubmit();
-          postText();
-        }}
-      >
-        &#8626;
-      </button>
-    </div>
+    <>
+      <div className={`searchWrapper ${inputtedData ? "expanded" : ""}`}>
+        <input
+          type="text"
+          id="inputForm"
+          name="myInput"
+          placeholder="Enter..."
+          value={data}
+          onChange={(event) => setData(event.target.value)}
+        />
+        <button
+          type="submit"
+          onClick={() => {
+            handleSubmit();
+            postText();
+          }}
+        >
+          &#8626;
+        </button>
+      </div>
+    </>
   );
 };
 
