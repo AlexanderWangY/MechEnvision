@@ -1,5 +1,4 @@
 .overwrapper {
-    border: 1px solid yellow;
     margin-top: 40vh;
     width: 60vw;
     display: flex;
@@ -13,7 +12,6 @@
 .searchWrapper {
     display: flex;
     align-items: center;
-    border: 1px solid red;
 }
 
 .expanded{
@@ -96,7 +94,6 @@ button:hover {
 .output-container {
     height: auto;
     display: flex;
-    border: 1px solid green;
 
     margin-bottom: 30px;
 
@@ -107,7 +104,6 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
     width: 100%;
 }
 
@@ -133,7 +129,13 @@ button:hover {
     font-family: 'Bebas Neue', sans-serif;
 }
 
-.materials li, .resources li {
+.liTitle {
+    background-color: black;
+    font-size: 35px;
+}
+
+
+li {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -171,5 +173,15 @@ button:hover {
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+@media only screen and (max-width: 910px) {
+    .output-container-ui {
+        display: block;
+    }
+
+    li {
+        width: auto;
+        font-size: small;
+    }
   }
   

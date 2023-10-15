@@ -79,6 +79,7 @@ const Search = () => {
           <div className={`output-container`}>
             <div className="output-container-ui">
               <div className="materials">
+                <li className="liTitle">Parts</li>
                 {materials.map((item) => (
                   <li>
                     {item.generalName}: {item.specificName} [
@@ -90,6 +91,7 @@ const Search = () => {
                 ))}
               </div>
               <div className="resources">
+                <li className="liTitle">Resources</li>
                 {resources.map((item) => (
                   <li>
                     {item.name} [
