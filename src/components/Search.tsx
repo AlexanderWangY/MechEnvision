@@ -40,7 +40,7 @@ const Search = () => {
 
   function handleSubmit() {
     console.log(`You inputted ${data}`);
-
+    setDataReceived(false);
     setData("");
     setInputtedData(true);
     console.log(`hello ${inputtedData}`);
@@ -70,6 +70,16 @@ const Search = () => {
         </div>
         {dataReceived && <div className="results">Results</div>}
 
+        {!dataReceived && inputtedData && (
+          <>
+            <div className="loading">
+              <div className="spinner"></div>
+            </div>
+            <div className="tooltip">
+              Tooltip: Ask for more details for better results!
+            </div>
+          </>
+        )}
         {dataReceived && (
           <div className={`output-container`}>
             <div className="output-container-ui">
