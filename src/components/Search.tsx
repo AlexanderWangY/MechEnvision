@@ -40,6 +40,7 @@ const Search = () => {
 
   function handleSubmit() {
     console.log(`You inputted ${data}`);
+    setDataReceived(false);
     setData("");
     setInputtedData(true);
     console.log(`hello ${inputtedData}`);
@@ -66,6 +67,11 @@ const Search = () => {
           &#8626;
         </button>
       </div>
+      {!dataReceived && inputtedData && (
+        <div className="loading">
+          <div className="spinner"></div>
+        </div>
+      )}
       {dataReceived && (
         <div className="output-container">
           <div className="output-container-ui">
