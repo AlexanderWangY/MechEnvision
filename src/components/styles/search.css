@@ -16,10 +16,6 @@
 
 .expanded{
     height: 100%;
-    
-}
-
-.searchWrapper.expanded{
     animation-name: slideUp;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -32,6 +28,7 @@
     justify-content: center;
     height: auto;
 }
+
 
 
 input {
@@ -140,6 +137,14 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 20px 10px 20px 10px;
+    margin-bottom: 25px;
+    background-color: #6554af;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    white-space: nowrap;
     
 }
 
@@ -159,6 +164,10 @@ li {
   
     /* Customize the loading spinner appearance */
   }
+  .results {
+    font-size: 60px;
+}
+
   
   .loading .spinner {
     border: 4px solid #FFF7EF; /* Spinner border color */
