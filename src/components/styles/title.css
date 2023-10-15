@@ -1,0 +1,106 @@
+body, h1 {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Create a container for the title page with background image */
+.wavy-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('wave.svg') repeat-x; /* Link to your SVG file */
+}
+.title-page {
+    background-size: cover; /* Cover the entire page with the image */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    height: 100vh; /* Set the height of the container to the viewport height */
+    text-align: left; /* Align content to the left */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+    padding: 30px; 
+}
+
+/* Style the title text */
+.title {
+    font-family: Arial, sans-serif;
+    font-size: 45px; /* Increase the font size */
+    font-weight: bold;
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+    margin-left: 15px;
+}
+
+.mission-box {
+    padding: 60px; /* Add padding for content within the box */
+    max-width: 800px; /* Set a maximum width for the box */
+    text-align: left; /* Align text to the left */
+}
+
+/* Style the mission statement text */
+.mission-text {
+    font-family: Arial, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+}
+/* Style the subheader */
+.mission-caption{
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin-top: -20px;
+}
+
+.start-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 30px; /* Increase the padding to make the button wider */
+    background-color: #fff; /* White background */
+    color: #ffcff6; /* Transparent text color */
+    text-decoration: none;
+    border: 2px solid #fff; /* White border */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover for both background and text color */
+}
+
+/* Hover effect for the "Start" button */
+.start-button:hover {
+    background-color: transparent; /* Invert colors on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* Button in the top right corner */
+.top-right-button {
+    margin: 20px;
+    background-color: transparent; /* Transparent background */
+    border: 3px solid #fff; /* White border */
+    border-radius: 5px; /* Rounded corners for a square shape */
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff; /* White text color */
+    display: flex;
+    justify-content: left;
+}
+.top-right-button:hover {
+    background-color: white; /* Invert colors on hover */
+    color: #ffcff6; /* White text color on hover */
+}
+
+/* Menu icon (horizontal lines) */
+.menu-icon {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
