@@ -1,6 +1,5 @@
 import "./App.css";
 import Search from "./components/Search";
-import Output from "./components/Output";
 
 const App = () => {
   return (
@@ -8,9 +7,9 @@ const App = () => {
       <div className="search">
         <Search />
       </div>
-      <div className="output">
+      {/* <div className="output">
         <Output />
-      </div>
+      </div> */}
     </>
   );
 };

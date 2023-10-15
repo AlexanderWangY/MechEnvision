@@ -3,7 +3,22 @@ import "./styles/search.css";
 
 const Search = () => {
   const [data, setData] = useState("");
+  const [dataReceived, setDataReceived] = useState(false);
   const [inputtedData, setInputtedData] = useState(false);
+  const [materials, setMaterials] = useState([
+    {
+      defaults: "test",
+      generalName: "test",
+      specificName: "test",
+      url: String,
+    },
+  ]);
+  const [resources, setResources] = useState([
+    {
+      name: "test",
+      url: String,
+    },
+  ]);
   async function postText() {
     const request = {
       userInput: data,
@@ -16,9 +31,11 @@ const Search = () => {
 
       body: JSON.stringify(request),
     });
-
+    setDataReceived(true);
     const textResponse = await response.json();
-    console.log(textResponse);
+    setMaterials(textResponse.parts);
+    setResources(textResponse.resources);
+    console.log(textResponse.resources);
   }
 
   function handleSubmit() {
@@ -49,6 +66,34 @@ const Search = () => {
           &#8626;
         </button>
       </div>
+      {dataReceived && (
+        <div className="output-container">
+          <div className="output-container-ui">
+            <div className="materials">
+              {materials.map((item) => (
+                <li>
+                  {item.generalName}: {item.specificName} [
+                  <a href={`${item.url}`} target="_blank">
+                    link
+                  </a>
+                  ]
+                </li>
+              ))}
+            </div>
+            <div className="resources">
+              {resources.map((item) => (
+                <li>
+                  {item.name} [
+                  <a href={`${item.url}`} target="_blank">
+                    link
+                  </a>
+                  ]
+                </li>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

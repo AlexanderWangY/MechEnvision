@@ -1,6 +1,7 @@
 .searchWrapper {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .searchWrapper.expanded{
@@ -12,7 +13,7 @@
     animation-direction: normal;
     animation-fill-mode: forwards;
 
-    transform: translateY(-30px)
+    transform: translateY(-250px)
 }
 
 input {
@@ -61,8 +62,60 @@ button:hover {
     }
 
     to {
-        transform: translateY(-30px);
+        transform: translateY(-250px);
     }
 }
 
+
+
+
+.output-container {
+    background-color: gray;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.output-container-ui {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.materials {
+    height: 100%;
+    flex: 1;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 15px 30px 15px;
+    opacity: 0.3;
+}
+
+
+.resources {
+    height: 100%;
+    flex: 1;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 15px 30px 15px;
+    opacity: 0.3;
+}
+
+.materials li, .resources li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 
