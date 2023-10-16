@@ -25,7 +25,7 @@ const Search = () => {
       userInput: data,
     };
     const response = await fetch(
-      "https://2c73-44-209-161-103.ngrok-free.app/generate",
+      "https://mech-envision-api.vercel.app/generate",
       {
         method: "POST",
         headers: {
