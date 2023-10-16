@@ -24,17 +24,14 @@ const Search = () => {
     const request = {
       userInput: data,
     };
-    const response = await fetch(
-      "https://004f-44-209-161-103.ngrok-free.app/generate",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+    const response = await fetch("http://44.209.161.103:8080/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
 
-        body: JSON.stringify(request),
-      }
-    );
+      body: JSON.stringify(request),
+    });
     setDataReceived(true);
     const textResponse = await response.json();
     setMaterials(textResponse.parts);
