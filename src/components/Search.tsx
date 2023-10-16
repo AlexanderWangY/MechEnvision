@@ -25,7 +25,7 @@ const Search = () => {
       userInput: data,
     };
     const response = await fetch(
-      "https://4fbf-34-201-71-236.ngrok-free.app/generate",
+      "https://2c73-44-209-161-103.ngrok-free.app/generate",
       {
         method: "POST",
         headers: {
